@@ -9,4 +9,23 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride("_method"));
 app.set("view engine", "ejs");
 
+//stylesheet
+app.use(express.static(__dirname + "/public"));
+
+
+app.get("/movies", function (req, res) {
+	res.render("movies/index");
+});
+
+app.get("/movies/results", function(req, res) {
+	res.render("movies/results");
+} );
+
+app.get("/movies/details", function(req, res) {
+	res.render("movies/details");
+} );
+
+app.get("/movies/saves", function(req, res) {
+	res.render("movies/results");
+} );
 
