@@ -17,15 +17,18 @@ app.get("/movies", function (req, res) {
 	res.render("movies/index");
 });
 
-app.get("/movies/results", function(req, res) {
+app.get("/movies/results", function (req, res) {
 	res.render("movies/results");
 } );
 
-app.get("/movies/details", function(req, res) {
+app.get("/movies/details", function (req, res) {
 	res.render("movies/details");
 } );
 
-app.get("/movies/saves", function(req, res) {
-	res.render("movies/results");
+app.get("/movies/bookmark", function (req, res) {
+	res.render("movies/bookmark");
 } );
 
+app.listen(3000, function () {
+  console.log("Visit localhost:3000");
+});
